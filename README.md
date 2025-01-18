@@ -1,3 +1,3 @@
-# tarotai
+# PictureBook Studio
 
-Ai tarot card reader.
+Ai-generated Children's picturebook platform concept
