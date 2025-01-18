@@ -1,0 +1,11 @@
+{
+  "name": "picturebookstudio",
+  "version": "1.0.0",
+  "description": "Ai generated childrens picturebooks",
+  "main": "index.html",
+  "author": "Steve Murray",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.21.1"
+  }
+}

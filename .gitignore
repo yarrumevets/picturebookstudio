@@ -1,0 +1,6 @@
+.DS_Store
+node_modules
+openaiApiCreds.json
+gptconfig.js
+.vscode
+workspace.code-workspace

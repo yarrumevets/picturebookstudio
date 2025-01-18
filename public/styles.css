@@ -1,0 +1,245 @@
+/* BACKGROUND */
+
+html,
+body {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  background-image: url("./images/bg.png");
+  background-repeat: repeat;
+}
+
+#backgroundoverlay {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  /* background-image: url("./images/bgoverlay.png");
+  background-repeat: repeat; */
+  margin: 0;
+  width: 100vw;
+  min-height: 100vh;
+}
+
+/* HEADER */
+
+header {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  margin-top: 2vw;
+  margin-bottom: 3vw;
+}
+
+#titlebordertop {
+  height: 27px;
+  width: 100%;
+  background-image: url("./images/title-bg-edge.png");
+  z-index: 2;
+}
+
+header h1 {
+  display: flex;
+  justify-content: center;
+  font-family: "Baloo 2", cursive;
+  color: white;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    2px 2px 0 #000; /* Black outline */
+  background-color: #cc3399;
+  width: 100%;
+  margin: 0;
+  box-shadow: 0px 10px 75px 70px rgba(0, 0, 0, 0.3),
+    0px -10px 75px 70px rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+#titleborderbottom {
+  height: 27px;
+  width: 100%;
+  background-image: url("./images/title-bg-edge.png");
+  transform: scaleY(-1);
+  z-index: 2;
+}
+
+header h1 a {
+  font-size: 12vw;
+  display: flex;
+  text-decoration: none;
+  align-items: baseline;
+}
+
+header h1 a #www {
+  font-size: 0.15em;
+  align-self: flex-start;
+  color: white;
+}
+
+header h1 a #title {
+  font-size: 1em;
+  line-height: 1em;
+  color: white;
+}
+
+header h1 a #dotcom {
+  font-size: 0.4em;
+  color: white;
+}
+
+/* MAIN SECTION */
+
+main {
+  /* This allows the footer to stay at the bottom. 
+  #book keeps the pages and background ratio in tact. */
+  flex: 1;
+}
+
+#bookcover {
+  /* display: none; */
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50vw;
+  height: 80vw;
+  background-color: darkblue;
+  /* Width of one page x height of the book */
+  width: 40vw;
+  height: 55vw;
+  border-right: 2vw solid lightgoldenrodyellow;
+  box-shadow: 0px 10px 75px 70px rgba(0, 0, 0, 0.3),
+    0px -10px 75px 70px rgba(0, 0, 0, 0.3);
+}
+
+#bookcover #coveropen {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 10vw;
+  height: 10vw;
+  /* arrow font */
+  font-size: 5vw;
+  font-weight: bolder;
+  text-align: center;
+  line-height: 10vw;
+  color: white;
+  cursor: grab;
+}
+
+#bookcover #covertitle {
+  color: yellow;
+  size: 5vw;
+}
+
+#bookcover #coverimage {
+  width: 20vw;
+  height: 20vw;
+  /* @TODO: Add a placeholder image for book cover loading state */
+  /* background-image: url("./images/placeholde_image.png"); */
+  background-size: cover;
+  background-position: center;
+  border: 1vw solid white;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+#book {
+  display: none;
+  /* display: flex; */
+  flex-direction: row;
+  background-image: url("./images/blankbook.png");
+  background-size: cover;
+  width: 95vw;
+  height: 55vw; /* preserves the aspect ratio roughly */
+  justify-content: space-between;
+  align-items: center;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 40vw;
+  height: 50vw;
+}
+
+#pageright {
+  margin-right: 5vw; /* Note: This is based on the non-uniform book bg image */
+}
+
+#pageleft {
+  margin-left: 8vw; /* Note: This is based on the non-uniform book bg image */
+}
+
+.pagenumber {
+  font-size: 2vw;
+  width: 2vw;
+  height: 2vw;
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  cursor: grab;
+}
+
+#pageleft .pagenumber {
+  left: 0;
+}
+
+#pageright .pagenumber {
+  right: 0;
+}
+
+.storytext {
+  font-size: 1.5vw;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  height: 20%;
+  width: 100%;
+  font-family: "Comic Neue", sans-serif;
+}
+
+#storypicleft {
+  background-image: url("./images/testimage1.png");
+  background-size: cover;
+  background-position: center;
+  height: 60%;
+  width: 100%;
+}
+
+#storypicright {
+  background-image: url("./images/testimage2.png");
+  background-size: cover;
+  background-position: center;
+  height: 60%;
+  width: 100%;
+}
+
+/* .storypicture {
+} */
+
+/* FOOTER */
+footer {
+  display: flex;
+  flex-direction: row;
+
+  justify-content: center;
+  align-items: center;
+
+  background: rgba(80, 72, 72, 0.2);
+  color: white;
+
+  height: 5vw;
+  width: 100vw;
+
+  min-height: 20px;
+  max-height: 50px;
+}
