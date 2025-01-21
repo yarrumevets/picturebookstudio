@@ -1,6 +1,10 @@
 .DS_Store
-node_modules
+Thumbs.db
+Desktop.ini
+*.code-workspace
+.vscode
+node_modules/
+*.log
+
 openaiApiCreds.json
 gptconfig.js
-.vscode
-workspace.code-workspace
